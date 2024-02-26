@@ -96,9 +96,13 @@ obstáculos de la siguiente forma X obstáculo o libre
 1. Para este problema se realizo un codigo en el cual se obtien un numero entero dada por el usuario y se have la suma hasta el numero que se introdujo en la terminal, dando como resultado la sume de los enteros hasta el numero "n". 
 
 ```adrian
+# declarar varibale para un numero entero 
 n = int(input("Introduce un número entero: "))
+# Se realiza la operacion dada por la practica 
 suma = n * (n + 1) / 2
+#Se imprime el resultado 
 print("La suma de los primeros números enteros desde 1 hasta " + str(n) + " es " + str(suma))
+
 
 ```
 
@@ -108,15 +112,18 @@ Primero se le pidio al usuario que agregara una variabnle en este caso int parqa
 
 
 ```adrian
-
+#se infica una varable float para las horas
 horas = float(input("Introduce tus horas de trabajo: "))
+#otra variable float para el costo 
 coste = float(input("Introduce lo que cobras por hora: "))
+#oipewracion para saber el salario 
 paga = horas * coste
+# se imprime la paga 
 print("Tu paga es", paga)
 
 ```
 
-Como se observa en el codigo anterior se puso una variable float para las horas trabajadas, de ahi se le pide al usuario que intriodusca el cost0 tambien con una variable float al final se calcula mediante una operacion multiplicadora las horas por la paga y se obtiene el resultado, finalmente se imprime el resultado de la operacion obteniendo cuanto se le va a pagar dependiendo de las horas trabajadas.
+Como se observa en el codigo anterior se puso una variable float para las horas trabajadas, de ahi se le pide al usuario que intriodusca el costo tambien con una variable float al final se calcula mediante una operacion multiplicadora las horas por la paga y se obtiene el resultado, finalmente se imprime el resultado de la operacion obteniendo cuanto se le va a pagar dependiendo de las horas trabajadas.
 
 3. Para el tercer ejercicio se relaizo un codigo que genere una lista de trabajadores, obteniendo su paga mediante las horas trabajdas y el costo de cada hora. 
 
@@ -147,6 +154,7 @@ for operador, info in operadores.items():
 Para este codigo que se muestra anteriormente primero se genera una lista de trabajadopres con nombre, suledo por hora y las horas trabajadas, subsecuente a la lista se realiza la operacion de cuanto se va  pagr a cada trabajador dependiendo de la lis, imprimoierntop su nombre y su sueldo.
 
 4. Para el cuerto problema se realizo un codigo en el cual se generar 10 numeros enteros al azar, despues se analiza los pares y los impares, a los impares se les sacara el producto de ellos obteniendo elk resultado.
+
 ```adrian
 
 import random
@@ -316,13 +324,13 @@ Por otra parte se imprime la matriz ya con obstaculos y sus espacios libres, des
 
 Se utilizan condiciones para verificar si el robot puede moverse en una dirección específica sin chocar con obstáculos, al final se  imprime la matriz final con obstáculos y la ruta seguida por el robot en forma de flechas.
 
-Si el robopt no llega a la posicio0n final se imprime un mensaje "Imposible llegar al destino".
+Si el robot no llega a la posicion final se imprime un mensaje "Imposible llegar al destino".
 
 Este código simula de manera visual el movimiento de un robot en un entorno con obstáculos y proporciona información sobre el mapa resultante y la ruta tomada por el robot.
 
 ### CONCLUSION 
 
-Al final de esta practica de laboratorio se obtuco conocimiento basico de la programacion en python, como es su estructura y como funcionan las variables y las operaciones simples en este lenguaj, por otra parte la practica misma al realizar los 6 problemas requeridos en el laboratorio para poder reforzar los conocimientsos obtenidos que al final nos ayudaron a tener codigos entendibles y con resultados exitosos en el reporte.
+Al final de esta practica de laboratorio se obtuvo conocimiento basico de la programacion en python, como es su estructura y como funcionan las variables y las operaciones simples en este lenguaj, por otra parte la practica misma al realizar los 6 problemas requeridos en el laboratorio para poder reforzar los conocimientsos obtenidos que al final nos ayudaron a tener codigos entendibles y con resultados exitosos en el reporte.
 
 Tambien, el conocuimiento basico de ROS y algunos comandos basicos para poder vincualr nuestra computadora virtual y GITHUB para poder trabajar simultaneamente, obteniendo un conocimiento basico para la utilizacion de los programas correctamente para poder trabajar de manera eficiente.
 

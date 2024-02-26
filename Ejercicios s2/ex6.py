@@ -31,6 +31,7 @@ ruta = []
 # Mientras el robot no esté en la posición final
 while posicion_actual != [filas - 1, columnas - 1]:
     ruta.append(tuple(posicion_actual))
+    
     # Determinar siguiente posición y dirección del robot
     if direccion == 'derecha':
         if posicion_actual[1] < columnas - 1 and matriz[posicion_actual[0]][posicion_actual[1] + 1] != 'X':

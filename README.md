@@ -91,8 +91,240 @@ obstáculos de la siguiente forma X obstáculo o libre
 * Deberá imprimir también la ruta que siguió.
 * Mostrar un segundo mapa con el “camino” seguido por el robot mediante flechas 
 
+### Soluciones 
+
+1. Para este problema se realizo un codigo en el cual se obtien un numero entero dada por el usuario y se have la suma hasta el numero que se introdujo en la terminal, dando como resultado la sume de los enteros hasta el numero "n". 
+
+```adrian
+n = int(input("Introduce un número entero: "))
+suma = n * (n + 1) / 2
+print("La suma de los primeros números enteros desde 1 hasta " + str(n) + " es " + str(suma))
+
+```
+
+Primero se le pidio al usuario que agregara una variabnle en este caso int parqa el numnero entero, despues se introdijo la formula requerida opara hacer la suma d elos enteros y hatsa el final conn un print se imprimio el resulrtaso que da la suma de la ecuacion dada en el codigo.
+
+2. Para el segundo problema se realizo un codigo donde se le pregunta al usuario el numero de horas trabajadas y el costo de cada una de las horas, esto se logro con el siguiente codigo:
 
 
+```adrian
+
+horas = float(input("Introduce tus horas de trabajo: "))
+coste = float(input("Introduce lo que cobras por hora: "))
+paga = horas * coste
+print("Tu paga es", paga)
+
+```
+
+Como se observa en el codigo anterior se puso una variable float para las horas trabajadas, de ahi se le pide al usuario que intriodusca el cost0 tambien con una variable float al final se calcula mediante una operacion multiplicadora las horas por la paga y se obtiene el resultado, finalmente se imprime el resultado de la operacion obteniendo cuanto se le va a pagar dependiendo de las horas trabajadas.
+
+3. Para el tercer ejercicio se relaizo un codigo que genere una lista de trabajadores, obteniendo su paga mediante las horas trabajdas y el costo de cada hora. 
+
+```adrian
+
+# Crear un diccionario con la información de los operadores
+operadores = {
+    'Lalo': {'sueldo_por_hora': 10, 'horas_trabajadas': 40},
+    'Juan': {'sueldo_por_hora': 12, 'horas_trabajadas': 35},
+    'Alain': {'sueldo_por_hora': 15, 'horas_trabajadas': 30},
+    'Pedro': {'sueldo_por_hora': 8, 'horas_trabajadas': 45},
+    'Jesus': {'sueldo_por_hora': 20, 'horas_trabajadas': 25},
+    'Adrian': {'sueldo_por_hora': 18, 'horas_trabajadas': 38},
+}
+
+# Imprimir nombre y sueldo de cada operador
+for operador, info in operadores.items():
+    nombre = operador
+    sueldo_por_hora = info['sueldo_por_hora']
+    horas_trabajadas = info['horas_trabajadas']
+    sueldo_a_pagar = sueldo_por_hora * horas_trabajadas
+
+    print(f'Operador: {nombre}, Sueldo a pagar: ${sueldo_a_pagar}')
+
+
+```
+
+Para este codigo que se muestra anteriormente primero se genera una lista de trabajadopres con nombre, suledo por hora y las horas trabajadas, subsecuente a la lista se realiza la operacion de cuanto se va  pagr a cada trabajador dependiendo de la lis, imprimoierntop su nombre y su sueldo.
+
+4. Para el cuerto problema se realizo un codigo en el cual se generar 10 numeros enteros al azar, despues se analiza los pares y los impares, a los impares se les sacara el producto de ellos obteniendo elk resultado.
+```adrian
+
+import random
+
+# Crear una lista de 10 números aleatorios
+numeros = [random.randint(1, 100) for _ in range(10)]
+
+# Inicializar variables para el promedio de los números pares y el producto de los números impares
+suma_pares = 0
+contador_pares = 0
+producto_impares = 1
+
+# Iterar sobre la lista de números
+for num in numeros:
+    if num % 2 == 0:  # Si el número es par
+        suma_pares += num
+        contador_pares += 1
+    else:  # Si el número es impar
+        producto_impares *= num
+
+# Calcular el promedio de los números pares
+if contador_pares != 0:
+    promedio_pares = suma_pares / contador_pares
+else:
+    promedio_pares = 0
+
+# Imprimir resultados
+print(f"Lista de números: {numeros}")
+print(f"Promedio de números pares: {promedio_pares}")
+print(f"Producto de números impares: {producto_impares}")
+
+
+```
+
+Para este codigo se generaron 10 numeros aleatorios con "random.randint", teniendo un rango de 1 a 10 para solo obtener 10 numeros. 
+
+Subsecuente a eso se obtuvieron los numeros impares de esos 10 numeros generados, generando la operacion para el producto de los impares, obteniendo el resultado final , 9imprimiendo los numeros impares y el producto de los mismos.
+
+5. Para el quinto problema se realizo un codigo en el cual es u juego de adivinar el numero generado, dando pistas si estas cerca o ya pusiste de mas.
+
+```adrian
+
+import random
+
+# Generar un número aleatorio entre 1 y 10
+numero_secreto = random.randint(1, 10)
+
+# Inicializar contador de intentos
+intentos = 0
+
+print("¿Que numero esto pensando entre 1 y 10?")
+
+while True:
+    # Solicitar al usuario que ingrese un número
+    intento_usuario = int(input("Adivina :): "))
+    
+    # Incrementar el contador de intentos
+    intentos += 1
+    
+    # Verificar si el número ingresado es correcto
+    if intento_usuario == numero_secreto:
+        print(f"¡Lo adivinaste en {intentos} intentos!")
+        break
+    else:
+        # Proporcionar pistas
+        if intento_usuario > numero_secreto:
+            print("Te pasaste.")
+        else:
+            print("Te falta.")
+```
+
+En el codigo anterior se muestra como se genera un numero aleatorio entre 1 y 10 con la variable "random.randint", por otro lado se hizo una comparacion en la cual se indica que si el numero introducido por el usuaria es mayor al que fue generado se imprime un mensaje que dice "te passte", por otro lado si es menor a el bnumero generado imprime un mensaje que muestra "te falta", por otro lado si adivinas el numero se imprime un mensaje de los intentos en lo que lo lograste.
+
+6. ERn el ultimo ejercicio se realizo un codigo el cual se hace un robot explarador que hace un camino para llegar al punto final.
+
+```adrian
+import random
+
+# Tamaño de la matriz
+filas = 5
+columnas = 5
+
+# Inicializar matriz con espacios libres
+matriz = [['o' for _ in range(columnas)] for _ in range(filas)]
+
+# Agregar obstáculos de manera aleatoria
+num_obstaculos = random.randint(5, 10)
+for _ in range(num_obstaculos):
+    fila_obstaculo = random.randint(0, filas - 1)
+    columna_obstaculo = random.randint(0, columnas - 1)
+    matriz[fila_obstaculo][columna_obstaculo] = 'X'
+
+# Función para imprimir la matriz
+def imprimir_matriz():
+    for fila in matriz:
+        print(' '.join(map(str, fila)))
+
+# Inicializar posición del robot
+posicion_actual = [0, 0]
+
+# Inicializar dirección del robot
+direccion = 'derecha'
+
+# Inicializar ruta seguida por el robot
+ruta = []
+
+# Mientras el robot no esté en la posición final
+while posicion_actual != [filas - 1, columnas - 1]:
+    ruta.append(tuple(posicion_actual))
+    # Determinar siguiente posición y dirección del robot
+    if direccion == 'derecha':
+        if posicion_actual[1] < columnas - 1 and matriz[posicion_actual[0]][posicion_actual[1] + 1] != 'X':
+            posicion_actual[1] += 1
+        elif posicion_actual[0] < filas - 1 and matriz[posicion_actual[0] + 1][posicion_actual[1]] != 'X':
+            direccion = 'abajo'
+        else:
+            print("Imposible llegar al destino.")
+            break
+    elif direccion == 'abajo':
+        if posicion_actual[0] < filas - 1 and matriz[posicion_actual[0] + 1][posicion_actual[1]] != 'X':
+            posicion_actual[0] += 1
+        elif posicion_actual[1] > 0 and matriz[posicion_actual[0]][posicion_actual[1] - 1] != 'X':
+            direccion = 'izquierda'
+        else:
+            print("Imposible llegar al destino.")
+            break
+    elif direccion == 'izquierda':
+        if posicion_actual[1] > 0 and matriz[posicion_actual[0]][posicion_actual[1] - 1] != 'X':
+            posicion_actual[1] -= 1
+        elif posicion_actual[0] > 0 and matriz[posicion_actual[0] - 1][posicion_actual[1]] != 'X':
+            direccion = 'arriba'
+        else:
+            print("Imposible llegar al destino.")
+            break
+    elif direccion == 'arriba':
+        if posicion_actual[0] > 0 and matriz[posicion_actual[0] - 1][posicion_actual[1]] != 'X':
+            posicion_actual[0] -= 1
+        elif posicion_actual[1] < columnas - 1 and matriz[posicion_actual[0]][posicion_actual[1] + 1] != 'X':
+            direccion = 'derecha'
+        else:
+            print("Imposible llegar al destino.")
+            break
+
+# Imprimir resultado
+if posicion_actual == [filas - 1, columnas - 1]:
+    print("Mapa con espacios libres y obstáculos:")
+    imprimir_matriz()
+    print("\nRuta seguida por el robot:")
+    for i in range(len(ruta)):
+        if i < len(ruta) - 1:
+            if ruta[i][0] < ruta[i + 1][0]:
+                print("↓ ", end='')
+            elif ruta[i][0] > ruta[i + 1][0]:
+                print("↑ ", end='')
+            elif ruta[i][1] < ruta[i + 1][1]:
+                print("→ ", end='')
+            elif ruta[i][1] > ruta[i + 1][1]:
+                print("← ", end='')
+        else:
+            print("✓")
+
+```
+
+Para este codigo la primera parte es generar una matriz 5x5 agregando 5 filas y 5 columnas, siguente a esto se estipulan los espacios libres y los obsataculos que hay en la matriz, tosdo esto con numeros aleatoris que tienen el valor de "X" y los espacios libres "O".
+
+Por otra parte se imprime la matriz ya con obstaculos y sus espacios libres, despues se pone el robot en la posicion inical que es (0,0) en la matriz, se utiliza un bucle while para simular el movimiento del robot hasta que llegue a la posición final.
+
+Se utilizan condiciones para verificar si el robot puede moverse en una dirección específica sin chocar con obstáculos, al final se  imprime la matriz final con obstáculos y la ruta seguida por el robot en forma de flechas.
+
+Si el robopt no llega a la posicio0n final se imprime un mensaje "Imposible llegar al destino".
+
+Este código simula de manera visual el movimiento de un robot en un entorno con obstáculos y proporciona información sobre el mapa resultante y la ruta tomada por el robot.
+
+### CONCLUSION 
+
+Al final de esta practica de laboratorio se obtuco conocimiento basico de la programacion en python, como es su estructura y como funcionan las variables y las operaciones simples en este lenguaj, por otra parte la practica misma al realizar los 6 problemas requeridos en el laboratorio para poder reforzar los conocimientsos obtenidos que al final nos ayudaron a tener codigos entendibles y con resultados exitosos en el reporte.
+
+Tambien, el conocuimiento basico de ROS y algunos comandos basicos para poder vincualr nuestra computadora virtual y GITHUB para poder trabajar simultaneamente, obteniendo un conocimiento basico para la utilizacion de los programas correctamente para poder trabajar de manera eficiente.
 
 
 

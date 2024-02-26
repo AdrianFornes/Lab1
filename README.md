@@ -98,11 +98,10 @@ obstáculos de la siguiente forma X obstáculo o libre
 ```adrian
 # declarar varibale para un numero entero 
 n = int(input("Introduce un número entero: "))
-# Se realiza la operacion dada por la practica 
-suma = n * (n + 1) / 2
-#Se imprime el resultado 
-print("La suma de los primeros números enteros desde 1 hasta " + str(n) + " es " + str(suma))
-
+# Se realiza la operaciohoras = float(input("Introduce tus horas de trabajo: "))
+coste = float(input("Introduce lo que cobras por hora: "))
+paga = horas * coste
+print("Tu paga es", paga)   
 
 ```
 
@@ -112,7 +111,7 @@ Primero se le pidio al usuario que agregara una variabnle en este caso int parqa
 
 
 ```adrian
-#se infica una varable float para las horas
+#se indica una variable float para las horas
 horas = float(input("Introduce tus horas de trabajo: "))
 #otra variable float para el costo 
 coste = float(input("Introduce lo que cobras por hora: "))
@@ -204,7 +203,10 @@ numero_secreto = random.randint(1, 10)
 
 # Inicializar contador de intentos
 intentos = 0
-
+horas = float(input("Introduce tus horas de trabajo: "))
+coste = float(input("Introduce lo que cobras por hora: "))
+paga = horas * coste
+print("Tu paga es", paga)
 print("¿Que numero esto pensando entre 1 y 10?")
 
 while True:
